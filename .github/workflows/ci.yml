@@ -6,3 +6,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: yarn install --immutable --immutable-cache --check-cache
+      - run: yarn test
