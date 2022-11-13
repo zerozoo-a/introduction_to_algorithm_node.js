@@ -42,7 +42,4 @@ function insertionSortDesc(A) {
 
 insertionSorts.insertionSort = insertionSort;
 insertionSorts.insertionSortDesc = insertionSortDesc;
-const a = [3, 1, 2];
-insertionSortDesc(a);
-
 exports.insertionSorts = insertionSorts;

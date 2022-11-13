@@ -20,15 +20,15 @@
  *
  */
 exports.selectionSort = function (A) {
-  for (let i = 0; i < A.length; i++) {
-    /**@type {number} */
+  for (let i = 0; i < A.length - 1; i++) {
     let min = i;
     for (let j = i + 1; j < A.length; j++) {
-      if (A[min] > A[j]) {
+      if (A[j] < A[min]) {
         min = j;
       }
     }
-    if (A[i] > A[min]) {
+    if (min != i) {
+      // min과 i의 값이 서로 달라졌다면 최소값이 업데이트 되었다는 의미이다.
       [A[i], A[min]] = [A[min], A[i]];
     }
   }
