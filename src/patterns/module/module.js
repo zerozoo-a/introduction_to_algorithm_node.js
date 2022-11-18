@@ -19,6 +19,8 @@ class CountView {
   constructor(module, options) {
     this.module = module;
     this.options = options;
+    this.updateView();
+    this.bind();
   }
 
   updateView() {
@@ -35,12 +37,6 @@ class CountView {
       this.increaseAndUpdateView();
     });
   }
-
-  // render() {
-  //   this.options.triggerEl.addEventListener("click", () => {
-  //     this.increaseAndUpdateView();
-  //   });
-  // }
 }
 
 class App {
