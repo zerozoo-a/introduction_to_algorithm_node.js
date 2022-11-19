@@ -1,45 +1,43 @@
 const insertionSorts = {};
 /**
  * @description
- * 배열을 두 개의 부분 배열로 나누면서 생각하면 된다.
+ * insertion sort는 O(n^2) 정렬중에서는 가장 효율이 좋다.
+ * 삽입 정렬은 외부 반복문이 검사할 인덱스를 배열 0 번째부터 하나씩 늘려가고 내부의 반복문은
+ * 외부 인덱스에서부터 0 번째 인덱스를 향해 값을 줄여나가면서 스왑한다 while문의 조건에 걸려 있기 때문에
+ * swap이 종료되면서 내부 반복문도 종료된다.
  *
- * 내부의 while 문은 바깥 배열의 반복문의 현재 인덱스보다 하나 적은 인덱스를 가지며
- * 0까지 반복문을 돌리게 된다. 이 때, 해당 인덱스의 배열 값이 바깥 인덱스가 가리키는 배열의 값보다 큰 경우
- * 내부 인덱스 + 1의 배열 위치에 내부 반복문의 해당 인덱스의 값을 대입한다.
+ * [2, 3, 4, 1] 정렬:
+ *
+ * 배열의 0 번째와 1 번째를 서로 비교
+ * ...
+ * 배열의 2 번째와 3 번째를 서로 비교
+ *
+ * 스왑 => [2, 3, 1, 4]
+ *
+ * 배열의 0 번째와 1 번째를 서로 비교
+ *
+ * 배열의 2 번째와 3 번째를 서로 비교
+ *
+ * 스왑 => [2, 1, 3, 4]
+ *
+ * 배열의 0 번째와 1 번째를 서로 비교
+ *
+ * 스왑 => [1, 2, 3, 4]
  *
  * @param {number[]} A
  * @returns {number[]}
  */
-// function insertionSort(A) {
-//   if (A.length < 2) return A;
-
-//   let i, j;
-
-//   for (j = 1; j < A.length; j++) {
-//     const key = A[j]; // 2
-//     i = j - 1; // 0
-//     while (A[i] > key) {
-//       console.log("j", j);
-//       console.log("i", i);
-//       A[i + 1] = A[i]; // 3 3 1
-//       i--;
-//     }
-//     A[i + 1] = key; // 3 2 1
-//   }
-//   return A;
-// }
 
 function insertionSortDesc(A) {
   if (A.length < 2) return A;
 
-  for (let j = 1; j < A.length; j++) {
-    const key = A[j];
-    let i = j - 1;
-    while (i >= 0 && A[i] < key) {
-      A[i + 1] = A[i];
-      i--;
+  let i, j;
+  for (i = 0; i < A.length - 1; i++) {
+    j = i;
+    while (j >= 0 && A[j] < A[j + 1]) {
+      [A[j], A[j + 1]] = [A[j + 1], A[j]];
+      j--;
     }
-    A[i + 1] = key;
   }
   return A;
 }
