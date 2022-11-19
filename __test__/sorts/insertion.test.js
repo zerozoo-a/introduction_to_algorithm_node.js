@@ -1,4 +1,5 @@
-const insertionSorts = require("../../src/sorts/insertion").insertionSorts;
+const insertionSorts =
+  require("../../src/algorithm/sorts/insertion").insertionSorts;
 describe("sorts는 숫자 배열을 sorting한다.", () => {
   const A = [1, 3, 7, 5, 2];
   const B = [1, 2, 3];
