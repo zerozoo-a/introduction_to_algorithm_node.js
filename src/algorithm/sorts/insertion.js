@@ -10,20 +10,24 @@ const insertionSorts = {};
  * @param {number[]} A
  * @returns {number[]}
  */
-function insertionSort(A) {
-  if (A.length < 2) return A;
+// function insertionSort(A) {
+//   if (A.length < 2) return A;
 
-  for (let j = 1; j < A.length; j++) {
-    const key = A[j]; // 2
-    let i = j - 1; // 0
-    while (i >= 0 && A[i] > key) {
-      A[i + 1] = A[i]; // 3 3 1
-      i--;
-    }
-    A[i + 1] = key; // 3 2 1
-  }
-  return A;
-}
+//   let i, j;
+
+//   for (j = 1; j < A.length; j++) {
+//     const key = A[j]; // 2
+//     i = j - 1; // 0
+//     while (A[i] > key) {
+//       console.log("j", j);
+//       console.log("i", i);
+//       A[i + 1] = A[i]; // 3 3 1
+//       i--;
+//     }
+//     A[i + 1] = key; // 3 2 1
+//   }
+//   return A;
+// }
 
 function insertionSortDesc(A) {
   if (A.length < 2) return A;
@@ -36,6 +40,25 @@ function insertionSortDesc(A) {
       i--;
     }
     A[i + 1] = key;
+  }
+  return A;
+}
+
+/**
+ *
+ * @param {number[]} A
+ * @returns {number[]}
+ */
+function insertionSort(A) {
+  if (A.length < 2) return A;
+
+  let i, j;
+  for (i = 0; i < A.length - 1; i++) {
+    j = i;
+    while (j >= 0 && A[j] > A[j + 1]) {
+      [A[j], A[j + 1]] = [A[j + 1], A[j]];
+      j--;
+    }
   }
   return A;
 }
