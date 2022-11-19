@@ -5,32 +5,28 @@
  *
  * 배열 [3,2,1]을 선택정렬을 통해 정렬한다면,
  *
- * 배열의 0 번째 인덱스를 첫 min 값으로 잡는다.
- * 이제 내부의 반복문은 첫 인덱스 + 1 번째부터 배열을 순회하게 된다.
+ * min 값을 Infinity로 설정하여 숫자배열에 대해 가장 큰 인자로 만든다.
+ * 이중 배열을 순회하면서 배열 내부의 값 중 min 보다 작은 값을 찾았을 때 min을 초기화한다.
+ * 해당하는 작은 값의 위치를 가리키는 index를 초기화한다.
  *
- * 3과 2를 비교해본다. 2가 더 작은 숫자이므로 min 값을 2로 업데이트한다.
- * 내부 반복문의 인덱스 값이 증가하여 배열의 2번째 인덱스를 가리키고
- * 현재의 min값과 값을 비교한다. 만약 더 적은 숫자라면 min 값을 업데이트한다.
- *
- * 이렇게 배열을 모두 순회하였고 해당 배열중 가장 적은 값을 알아내었다.
- *
+ * i는 내부 배열의 시작지점을 나타내고 index가 변경되었다는 것은 min이 갱신되었음을 의미하므로
+ * swap을 할 가치가 있다. 따라서 swap 해준다.
  *
  * @param {number[]} A
  * @returns {number[]}
  *
  */
 exports.selectionSort = function (A) {
-  for (let i = 0; i < A.length - 1; i++) {
-    let min = i;
-    for (let j = i + 1; j < A.length; j++) {
-      if (A[j] < A[min]) {
-        min = j;
+  let i, j, min, index;
+  for (i = 0; i < A.length; i++) {
+    min = Infinity;
+    for (j = i; j < A.length; j++) {
+      if (min > A[j]) {
+        min = A[j];
+        index = j;
       }
     }
-    if (min != i) {
-      // min과 i의 값이 서로 달라졌다면 최소값이 업데이트 되었다는 의미이다.
-      [A[i], A[min]] = [A[min], A[i]];
-    }
+    if (i !== index) [A[i], A[index]] = [A[index], A[i]];
   }
   return A;
 };
