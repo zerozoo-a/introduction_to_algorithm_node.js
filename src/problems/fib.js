@@ -14,6 +14,8 @@ function simple_fib(N) {
 }
 
 /**
+ * helper 함수를 통해 O(n) 만큼의 공간복잡도를 사용하여
+ * 시간복잡도를 O(n)까지 끌어내렸다.
  *
  * @param {number} N
  * @returns {number}
