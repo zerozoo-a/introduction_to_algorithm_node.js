@@ -1,6 +1,7 @@
 {
   "name": "ITA",
   "packageManager": "yarn@3.2.1",
+  "type": "module",
   "scripts": {
     "test": "jest"
   },
