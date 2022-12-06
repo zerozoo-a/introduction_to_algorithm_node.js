@@ -27,10 +27,35 @@ class LinkedList {
     return this;
   }
 
+  /**
+   * 선행재귀
+   * stack이 해제되는 순서대로 순회합니다.
+   * a->b->c의 경우 c->b->a
+   *
+   * @param {Node} node
+   * @param {number} n
+   */
   traverse1(node, n = 0) {
     if (node !== null) {
       this.traverse1(node.next, n + 1);
       console.log(`data: ${n}`, node.val);
+    }
+  }
+
+  /**
+   *
+   *
+   * 후행재귀
+   * 출력을 먼저 하고 다음 재귀로 넘어가기 때문에
+   * 스택의 안쪽부터 출력이 이미 실행된 채로 다음 재귀로 넘어간다.
+   *
+   * @param {Node} node
+   * @param {number} n
+   */
+  traverse2(node, n = 0) {
+    if (node !== null) {
+      console.log(`data: ${n}`, node.val);
+      this.traverse2(node.next, n + 1);
     }
   }
 }
@@ -42,4 +67,5 @@ conga.add("b");
 conga.add("c");
 conga.add("d");
 console.log("conga", conga);
-conga.traverse1(conga.head);
+// conga.traverse1(conga.head);
+conga.traverse2(conga.head);
