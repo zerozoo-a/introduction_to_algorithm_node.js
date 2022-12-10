@@ -67,5 +67,5 @@ conga.add("b");
 conga.add("c");
 conga.add("d");
 console.log("conga", conga);
-// conga.traverse1(conga.head);
-conga.traverse2(conga.head);
+conga.traverse1(conga.head); // d c b a
+conga.traverse2(conga.head); // a b c d
