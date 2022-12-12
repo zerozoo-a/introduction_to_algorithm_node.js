@@ -15,9 +15,16 @@ Node* newNode(int data) {
 void printInOrder(struct Node* node) {
     if(node == NULL) return;
 
-    printInOrder(node -> left);
+
+    if(node -> left != NULL){
+        printInOrder(node -> left);
+    }
+
     std::cout << node -> data << " ";
-    printInOrder(node -> right);
+
+    if(node -> right != NULL){
+        printInOrder(node -> right);
+    }
 }
 
 int main() {

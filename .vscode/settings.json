@@ -1,4 +1,24 @@
 {
     "liveServer.settings.port": 5501,
-    "C_Cpp.errorSquiggles": "Disabled"
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "__bit_reference": "cpp",
+        "__mutex_base": "cpp",
+        "__node_handle": "cpp",
+        "array": "cpp",
+        "ios": "cpp",
+        "istream": "cpp",
+        "optional": "cpp",
+        "ostream": "cpp",
+        "sstream": "cpp",
+        "streambuf": "cpp",
+        "string_view": "cpp",
+        "tuple": "cpp",
+        "variant": "cpp",
+        "vector": "cpp",
+        "__functional_03": "cpp",
+        "functional": "cpp",
+        "memory": "cpp",
+        "iostream": "cpp"
+    }
 }

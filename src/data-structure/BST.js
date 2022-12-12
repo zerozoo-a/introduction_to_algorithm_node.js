@@ -11,9 +11,13 @@ class Node {
 const printInOrder = (node) => {
   if (!node) return;
 
-  printInOrder(node.left);
+  if (node.left !== null) {
+    printInOrder(node.left);
+  }
   console.log(node.data);
-  printInOrder(node.right);
+  if (node.right !== null) {
+    printInOrder(node.right);
+  }
 };
 
 const main = (() => {
