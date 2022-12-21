@@ -1,0 +1,3 @@
+/Users/zoo/codes/ITA/cmake-build-debug/CMakeFiles/ITA.dir
+/Users/zoo/codes/ITA/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/zoo/codes/ITA/cmake-build-debug/CMakeFiles/rebuild_cache.dir

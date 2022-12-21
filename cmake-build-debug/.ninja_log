@@ -1,0 +1,7 @@
+# ninja log v5
+0	67	1671549747558416194	CMakeFiles/ITA.dir/src/cpp/ninenine/nine.cpp.o	8e8603b850b6ddb5
+1	391	1671549747881270779	CMakeFiles/ITA.dir/src/cpp/static-vars/static.cpp.o	118aecc459584cb3
+0	414	1671549747904890359	CMakeFiles/ITA.dir/src/cpp/fib/fib.cpp.o	a0e3d9f4e8470c15
+0	426	1671549747917757107	CMakeFiles/ITA.dir/src/cpp/bubbleSort/bubbleSort.cpp.o	948cc4f43e5ee7a5
+1	434	1671549747925659591	CMakeFiles/ITA.dir/src/cpp/prac/pass.cpp.o	411635ceb6d09b1d
+1	440	1671549747931339703	CMakeFiles/ITA.dir/src/cpp/binary-search-tree.cpp.o	918c431c8baf00e9
