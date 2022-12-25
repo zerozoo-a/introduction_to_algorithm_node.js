@@ -1,4 +1,5 @@
 /**
+ * 문자열의 길이를 반환합니다.
  *
  * @param {string} str
  * @returns
